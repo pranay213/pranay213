@@ -1,27 +1,38 @@
-# 🌌 Welcome to My Universe! 🚀  
-
-![Universe Banner](https://images.unsplash.com/photo-1446776811953-b23d57bd21aa)
+# 🚀 Welcome to My GitHub Profile!  
 
 ## 🌍 Live Globe Animation  
 ![Globe Animation](https://raw.githubusercontent.com/pranay213/pranay213/main/assets/globe.gif)  
 
 ---
 
-## 📊 GitHub Stats & Contributions  
-![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=tokyonight)  
+## 📊 GitHub Stats  
+![GitHub Stars](https://img.shields.io/github/stars/pranay213?style=for-the-badge)  
+![GitHub Forks](https://img.shields.io/github/forks/pranay213?style=for-the-badge)  
+![GitHub Watchers](https://img.shields.io/github/watchers/pranay213?style=for-the-badge)  
+
+---
+
+## 🔥 Contribution Graph  
+![GitHub Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=tokyonight)  
+
+---
+
+## 📈 GitHub Streak  
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=pranay213&theme=tokyonight)  
-![GitHub Contributions](https://github-contributor-stats.vercel.app/api?username=pranay213&theme=tokyonight)  
 
 ---
 
-## 🚀 GitHub PR & Commit Stats  
-![Commits](https://img.shields.io/github/commit-activity/y/pranay213?style=for-the-badge)  
-![GitHub PRs](https://img.shields.io/github/issues-pr/pranay213?style=for-the-badge)  
-![GitHub Merged PRs](https://img.shields.io/github/issues-pr-closed/pranay213?style=for-the-badge&color=green)  
+## 🏆 GitHub Achievements  
+![GitHub Achievements](https://github-profile-trophy.vercel.app/?username=pranay213&theme=radical)  
 
 ---
 
-## 🔥 Tools & Technologies  
+## 🎨 Top Languages  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=tokyonight)  
+
+---
+
+## 💻 Tools & Technologies  
 ![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)  
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
@@ -31,10 +42,6 @@
 
 ---
 
-## 🔄 PR Tree & Merge Tree  
-```sh
-# PR Tree
-git log --graph --oneline --decorate --all
-
-# Merge Tree
-git log --graph --abbrev-commit --decorate --all --branches
+## 🔗 Connect With Me  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pranay213)  
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranay213)  
