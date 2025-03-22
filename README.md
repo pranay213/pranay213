@@ -2,46 +2,39 @@
 
 ![Universe Banner](https://images.unsplash.com/photo-1446776811953-b23d57bd21aa)
 
-## 👨‍💻 About Me  
-🚀 **Software Developer** at Blocmatrix IT Solutions  
-💻 Expert in **React, Next.js, React Native, Node.js, Docker, AWS**  
-🌍 Passionate about **Cloud Computing, Mobile Apps, & Scalable Systems**  
+## 🌍 Live Globe Animation  
+![Globe Animation](https://raw.githubusercontent.com/pranay213/pranay213/main/assets/globe.gif)  
 
 ---
 
-## 🛠️ Tech Stack  
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS](https://img.shields.io/badge/macOS-000?style=for-the-badge&logo=apple&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+## 📊 GitHub Stats & Contributions  
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=tokyonight)  
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=pranay213&theme=tokyonight)  
+![GitHub Contributions](https://github-contributor-stats.vercel.app/api?username=pranay213&theme=tokyonight)  
 
 ---
 
-## 🚀 GitHub Stats  
-### 📊 Contribution Stats  
-![Pranay's GitHub Stats](https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&theme=tokyonight)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=tokyonight)  
-
-### 🌳 PR Tree & Merge Tree  
-![PR Tree](https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=tokyonight)  
-
-### 📌 Recent PRs  
-[![GitHub PRs](https://img.shields.io/github/issues-pr/pranay213?style=for-the-badge)](https://github.com/pranay213/pulls)  
-[![GitHub Merged PRs](https://img.shields.io/github/issues-pr-closed/pranay213?style=for-the-badge&color=green)](https://github.com/pranay213/pulls?q=is%3Apr+is%3Aclosed)  
+## 🚀 GitHub PR & Commit Stats  
+![Commits](https://img.shields.io/github/commit-activity/y/pranay213?style=for-the-badge)  
+![GitHub PRs](https://img.shields.io/github/issues-pr/pranay213?style=for-the-badge)  
+![GitHub Merged PRs](https://img.shields.io/github/issues-pr-closed/pranay213?style=for-the-badge&color=green)  
 
 ---
 
-## 🌍 Connect with Me  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)  
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=web&logoColor=white)](https://yourportfolio.com)  
-[![Email](https://img.shields.io/badge/Email-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@gmail.com)  
+## 🔥 Tools & Technologies  
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)  
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)  
+![MacOS](https://img.shields.io/badge/MacOS-000000?style=for-the-badge&logo=apple&logoColor=white)  
 
 ---
 
-### ☄️ Fun Fact  
-🌌 **"The universe is infinite, just like the possibilities in tech!"**  
+## 🔄 PR Tree & Merge Tree  
+```sh
+# PR Tree
+git log --graph --oneline --decorate --all
 
+# Merge Tree
+git log --graph --abbrev-commit --decorate --all --branches
