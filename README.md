@@ -2,10 +2,6 @@
 
 ## 📊 GitHub Stats  
 ![GitHub Stars](https://img.shields.io/github/stars/pranay213?style=for-the-badge)  
-![GitHub Forks](https://img.shields.io/github/forks/pranay213?style=for-the-badge)  
-![GitHub Watchers](https://img.shields.io/github/watchers/pranay213?style=for-the-badge)  
-
----
 
 ## 🔥 Contribution Graph  
 ![GitHub Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=tokyonight)  
