@@ -1,10 +1,5 @@
 # 🚀 Welcome to My GitHub Profile!  
 
-## 🌍 Live Globe Animation  
-![Globe Animation](https://raw.githubusercontent.com/pranay213/pranay213/main/assets/globe.gif)  
-
----
-
 ## 📊 GitHub Stats  
 ![GitHub Stars](https://img.shields.io/github/stars/pranay213?style=for-the-badge)  
 ![GitHub Forks](https://img.shields.io/github/forks/pranay213?style=for-the-badge)  
