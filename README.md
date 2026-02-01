@@ -1,7 +1,7 @@
 # 🚀 Welcome to My GitHub Profile!  
 
 ## 🔥 Contribution Overview
-![Metrics](https://metrics.lecoq.io/pranay213?template=classic&base.activity=1&base.community=0&base.repositories=0&base.metadata=0&config.timezone=Asia/Kolkata)
+![Metrics](https://github-five-theta.vercel.app/)
 
 ---
 
