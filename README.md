@@ -1,62 +1,84 @@
-# 🚀 Welcome to My GitHub Profile!  
+# Pranay Kumar
+**Software Engineer | Full-Stack Development | Scalable Systems**
 
-## 🔥 Contribution Overview
-![Metrics](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/250px-Rotating_earth_%28large%29.gif)
-
----
-
-## 📈 GitHub Streak  
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=pranay213&theme=tokyonight)  
+![Profile Views](https://komarev.com/ghpvc/?username=pranay213&label=Profile%20Views&color=0e75b6&style=flat)
 
 ---
 
-## 📊 GitHub Stats  
-![GitHub Stars](https://img.shields.io/github/stars/pranay213?style=for-the-badge)  
+## About
+Software Engineer with hands-on experience in building **scalable web and mobile applications**.  
+Focused on writing **clean, maintainable code**, designing **reliable APIs**, and improving **performance and system stability**.
 
-
-
-## 🏆 GitHub Achievements  
-![GitHub Achievements](https://github-profile-trophy.vercel.app/?username=pranay213&theme=radical)  
+Strong background in **JavaScript/TypeScript**, **React ecosystems**, and **Node.js**, with practical exposure to **cloud-native and DevOps workflows**.
 
 ---
 
-## 🎨 Top Languages  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=tokyonight)  
+## Technical Skills
+
+### Languages
+- JavaScript (ES6+)
+- TypeScript
+- SQL
+
+### Frontend
+- React
+- React Native
+- Next.js
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express
+- RESTful APIs
+
+### Databases
+- MongoDB
+- PostgreSQL
+
+### DevOps & Infrastructure
+- Docker
+- Kubernetes
+- GitHub Actions
+- Nginx
+
+### Operating Systems
+- Linux (Ubuntu)
+- macOS
+- Windows
 
 ---
 
-## 🛠 **Languages & Technologies**  
-### **Languages:**  
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)    
-![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white)  
+## GitHub Statistics
 
-### **Frontend Technologies:**  
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)  
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&hide_border=true&theme=default)
 
-### **Backend & Databases:**  
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)  
-
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)  
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)  
-
-### **DevOps & Tools:**  
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)  
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)  
-
-### **Operating Systems:**  
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)  
-![MacOS](https://img.shields.io/badge/MacOS-000000?style=for-the-badge&logo=apple&logoColor=white)  
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)  
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=pranay213&hide_border=true&theme=default)
 
 ---
 
-## 🔗 Connect With Me  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pranay213)  
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranay213)  
+## Language Usage
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&hide_border=true&theme=default)
+
+---
+
+## Engineering Principles
+- Clean, readable code over clever solutions
+- Design for scale and long-term maintainability
+- Measure performance before optimizing
+- Strong ownership and accountability
+- Simplicity in system design
+
+---
+
+## Focus Areas
+- Full-stack application architecture
+- API design, security, and performance
+- Cloud-native deployments
+- CI/CD automation
+
+---
+
+## Contact
+- GitHub: https://github.com/pranay213
+- LinkedIn: https://linkedin.com/in/pranay213
