@@ -1,7 +1,7 @@
 # 🚀 Welcome to My GitHub Profile!  
 
 ## 🔥 Contribution Overview
-![Metrics](https://github-five-theta.vercel.app/)
+![Metrics](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/250px-Rotating_earth_%28large%29.gif)
 
 ---
 
