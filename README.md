@@ -50,7 +50,6 @@ Strong background in **JavaScript/TypeScript**, **React ecosystems**, and **Node
 
 ## GitHub Statistics
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&hide_border=true&theme=default)
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=pranay213&hide_border=true&theme=default)
 
