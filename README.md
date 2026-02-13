@@ -1,6 +1,13 @@
 # Pranay Kumar
 **Software Engineer | Full-Stack Development | Scalable Systems**
 
+
+## 🌐 My GitHub Flow
+
+[![GitHub Flow Preview](https://api.microlink.io/?url=https://github-five-theta.vercel.app/&screenshot=true&meta=false&embed=screenshot.url)](https://github-five-theta.vercel.app/)
+
+
+
 ![Profile Views](https://komarev.com/ghpvc/?username=pranay213&label=Profile%20Views&color=0e75b6&style=flat)
 
 ---
@@ -48,12 +55,7 @@ Strong background in **JavaScript/TypeScript**, **React ecosystems**, and **Node
 
 ---
 
-## GitHub Statistics
 
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=pranay213&hide_border=true&theme=default)
-
----
 
 ## Language Usage
 
