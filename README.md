@@ -7,6 +7,11 @@
 [![GitHub Flow Preview](https://api.microlink.io/?url=https://github-five-theta.vercel.app/&screenshot=true&meta=false&embed=screenshot.url)](https://github-five-theta.vercel.app/)
 
 
+## 🌐 My GitHub Flow
+
+[![GitHub Flow Preview](https://api.microlink.io/?url=https://github-five-theta.vercel.app/&screenshot=true&meta=false&waitForSelector=%23root&embed=screenshot.url)](https://github-five-theta.vercel.app/)
+
+
 
 ![Profile Views](https://komarev.com/ghpvc/?username=pranay213&label=Profile%20Views&color=0e75b6&style=flat)
 
