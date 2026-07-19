@@ -2,7 +2,7 @@ import os
 import sys
 import requests
 import json
-import datetime
+import re
 
 TOKEN = os.environ.get("GITHUB_TOKEN")
 if not TOKEN:
@@ -40,57 +40,25 @@ def fetch_data():
     }
     """ % USER
 
-    now = datetime.datetime.utcnow()
-    one_year_ago = now - datetime.timedelta(days=365)
-    to_date = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    from_date = one_year_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    query_contribs = """
-    query {
-      user(login: "%s") {
-        contributionsCollection(from: "%s", to: "%s") {
-          contributionCalendar {
-            totalContributions
-            weeks {
-              contributionDays {
-                contributionCount
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-    """ % (USER, from_date, to_date)
-
     print("Fetching repositories data...")
     res_repos = requests.post("https://api.github.com/graphql", json={"query": query_repos}, headers=HEADERS)
     if res_repos.status_code != 200:
         print(f"Error fetching repos: {res_repos.status_code}")
         sys.exit(1)
-        
-    print("Fetching activity calendar data...")
-    res_contribs = requests.post("https://api.github.com/graphql", json={"query": query_contribs}, headers=HEADERS)
-    if res_contribs.status_code != 200:
-        print(f"Error fetching contribs: {res_contribs.status_code}")
-        sys.exit(1)
 
     json_repos = res_repos.json()
-    json_contribs = res_contribs.json()
-
-    if "errors" in json_repos or "errors" in json_contribs:
+    if "errors" in json_repos:
         print("GraphQL Errors detected!")
-        if "errors" in json_repos: print("Repos error:", json.dumps(json_repos["errors"], indent=2))
-        if "errors" in json_contribs: print("Contribs error:", json.dumps(json_contribs["errors"], indent=2))
-        
-        # Fallback to zeros for the calendar if contributions fail due to resource limits
-        if "errors" in json_contribs and "RESOURCE_LIMITS_EXCEEDED" in str(json_contribs["errors"]):
-            print("Resource limit exceeded on contributions. Proceeding with safe partial data...")
-            json_contribs = {"data": {"user": {"contributionsCollection": {
-                "contributionCalendar": {"totalContributions": 0, "weeks": []}
-            }}}}
-        else:
-            sys.exit(1)
+        print("Repos error:", json.dumps(json_repos["errors"], indent=2))
+        sys.exit(1)
+
+    print("Fetching activity calendar data via HTML scraping to bypass API limits...")
+    html = requests.get(f"https://github.com/users/{USER}/contributions").text
+    levels = re.findall(r'data-level="(\d+)"', html)
+    activity = [int(l) for l in levels[-35*7:]] if levels else [0]*(35*7)
+    
+    total_match = re.search(r'([\d,]+)\s+contributions', html)
+    total_contribs = int(total_match.group(1).replace(',', '')) if total_match else 0
 
     print("Fetching radar stats via REST Search API to bypass limits...")
     def get_search_count(q, endpoint="issues"):
@@ -105,7 +73,6 @@ def fetch_data():
     commits_count = get_search_count(f"author:{USER}", endpoint="commits")
 
     data_repos = json_repos["data"]["user"]
-    data_contribs = json_contribs["data"]["user"]
     
     repos = data_repos["repositories"]["nodes"]
     total_repos = data_repos["repositories"]["totalCount"]
@@ -122,21 +89,15 @@ def fetch_data():
     
     top_repos = sorted(repos, key=lambda x: x["stargazerCount"], reverse=True)[:4]
 
-    weeks = data_contribs["contributionsCollection"]["contributionCalendar"]["weeks"]
-    activity = []
-    for week in weeks[-35:]:
-        for day in week["contributionDays"]:
-            activity.append(day["contributionCount"])
-            
     return {
         "repos": total_repos,
         "stars": total_stars,
         "followers": data_repos["followers"]["totalCount"],
         "following": data_repos["following"]["totalCount"],
-        "contributions": data_contribs["contributionsCollection"]["contributionCalendar"]["totalContributions"],
+        "contributions": total_contribs,
         "pinned": top_repos,
         "langs": langs,
-        "activity": activity[-35*7:] if activity else [0]*(35*7),
+        "activity": activity,
         "radar": {
             "commits": commits_count,
             "issues": issues_count,
@@ -217,7 +178,8 @@ def generate_svgs(data):
     for i, count in enumerate(activity):
         c = i // 7
         r = i % 7
-        color = "#161b22" if count == 0 else ("#0e4429" if count < 3 else ("#006d32" if count < 6 else "#26a641"))
+        colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+        color = colors[count] if count < len(colors) else "#39d353"
         activity_grid += f'<rect x="{c*15}" y="{r*15}" width="11" height="11" rx="2" fill="{color}" />'
 
     lang_legend = ""
@@ -232,7 +194,7 @@ def generate_svgs(data):
     charts_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%" height="100%">
         <rect x="0" y="10" width="590" height="280" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
         <text x="25" y="45" font-family="{font_family}" font-size="16" fill="{HEADING}" font-weight="600">📈 GitHub Activity</text>
-        <text x="25" y="75" font-family="{font_family}" font-size="14" fill="{TEXT}">{data["contributions"]} contributions in the last year</text>
+        <text x="25" y="75" font-family="{font_family}" font-size="14" fill="{TEXT}">{data["contributions"]:,} contributions in the last year</text>
         <g transform="translate(25, 100)">
             {activity_grid}
         </g>
