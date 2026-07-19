@@ -14,7 +14,7 @@ HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs("assets", exist_ok=True)
 
 def fetch_data():
-    query = """
+    query_repos = """
     query {
       user(login: "%s") {
         repositories(first: 100, isFork: false, privacy: PUBLIC) {
@@ -35,6 +35,13 @@ def fetch_data():
         following {
           totalCount
         }
+      }
+    }
+    """ % USER
+
+    query_contribs = """
+    query {
+      user(login: "%s") {
         contributionsCollection {
           contributionCalendar {
             totalContributions
@@ -54,24 +61,42 @@ def fetch_data():
     }
     """ % USER
 
-    print("Fetching data from GitHub GraphQL API...")
-    res = requests.post("https://api.github.com/graphql", json={"query": query}, headers=HEADERS)
-    if res.status_code != 200:
-        print(f"Error: Failed to fetch data. Status Code: {res.status_code}")
-        print("Response:", res.text)
-        print("Make sure your PAT token is valid and not expired!")
+    print("Fetching repositories data...")
+    res_repos = requests.post("https://api.github.com/graphql", json={"query": query_repos}, headers=HEADERS)
+    if res_repos.status_code != 200:
+        print(f"Error fetching repos: {res_repos.status_code}")
         sys.exit(1)
         
-    json_data = res.json()
-    if "errors" in json_data:
-        print("GraphQL Errors:")
-        print(json.dumps(json_data["errors"], indent=2))
+    print("Fetching contributions data...")
+    res_contribs = requests.post("https://api.github.com/graphql", json={"query": query_contribs}, headers=HEADERS)
+    if res_contribs.status_code != 200:
+        print(f"Error fetching contribs: {res_contribs.status_code}")
         sys.exit(1)
 
-    data = json_data["data"]["user"]
+    json_repos = res_repos.json()
+    json_contribs = res_contribs.json()
+
+    if "errors" in json_repos or "errors" in json_contribs:
+        print("GraphQL Errors detected!")
+        if "errors" in json_repos: print("Repos error:", json.dumps(json_repos["errors"], indent=2))
+        if "errors" in json_contribs: print("Contribs error:", json.dumps(json_contribs["errors"], indent=2))
+        
+        # Fallback to zeros for the radar chart if contributions fail due to resource limits
+        if "errors" in json_contribs and "RESOURCE_LIMITS_EXCEEDED" in str(json_contribs["errors"]):
+            print("Resource limit exceeded on contributions. Proceeding with safe partial data...")
+            json_contribs = {"data": {"user": {"contributionsCollection": {
+                "contributionCalendar": {"totalContributions": 0, "weeks": []},
+                "totalCommitContributions": 0, "totalIssueContributions": 0,
+                "totalPullRequestContributions": 0, "totalPullRequestReviewContributions": 0
+            }}}}
+        else:
+            sys.exit(1)
+
+    data_repos = json_repos["data"]["user"]
+    data_contribs = json_contribs["data"]["user"]
     
-    repos = data["repositories"]["nodes"]
-    total_repos = data["repositories"]["totalCount"]
+    repos = data_repos["repositories"]["nodes"]
+    total_repos = data_repos["repositories"]["totalCount"]
     total_stars = sum(r["stargazerCount"] for r in repos)
     
     lang_counts = {}
@@ -85,7 +110,7 @@ def fetch_data():
     
     top_repos = sorted(repos, key=lambda x: x["stargazerCount"], reverse=True)[:4]
 
-    weeks = data["contributionsCollection"]["contributionCalendar"]["weeks"]
+    weeks = data_contribs["contributionsCollection"]["contributionCalendar"]["weeks"]
     activity = []
     for week in weeks[-35:]:
         for day in week["contributionDays"]:
@@ -94,17 +119,17 @@ def fetch_data():
     return {
         "repos": total_repos,
         "stars": total_stars,
-        "followers": data["followers"]["totalCount"],
-        "following": data["following"]["totalCount"],
-        "contributions": data["contributionsCollection"]["contributionCalendar"]["totalContributions"],
+        "followers": data_repos["followers"]["totalCount"],
+        "following": data_repos["following"]["totalCount"],
+        "contributions": data_contribs["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "pinned": top_repos,
         "langs": langs,
-        "activity": activity[-35*7:],
+        "activity": activity[-35*7:] if activity else [0]*(35*7),
         "radar": {
-            "commits": data["contributionsCollection"]["totalCommitContributions"],
-            "issues": data["contributionsCollection"]["totalIssueContributions"],
-            "prs": data["contributionsCollection"]["totalPullRequestContributions"],
-            "reviews": data["contributionsCollection"]["totalPullRequestReviewContributions"]
+            "commits": data_contribs["contributionsCollection"]["totalCommitContributions"],
+            "issues": data_contribs["contributionsCollection"]["totalIssueContributions"],
+            "prs": data_contribs["contributionsCollection"]["totalPullRequestContributions"],
+            "reviews": data_contribs["contributionsCollection"]["totalPullRequestReviewContributions"]
         }
     }
 
