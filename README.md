@@ -2,16 +2,19 @@
 
 # 👋 Hi, I'm Pranay Kumar
 
-### 🚀 Senior Full Stack Developer | React • React Native • Node.js • Go
+### Senior Full Stack Developer • React • React Native • Node.js • Go
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Senior+Full+Stack+Developer;React+%7C+Node.js+%7C+React+Native;Learning+Go+and+System+Design;Building+Scalable+Applications;Always+Learning+🚀"/>
 
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&center=true&vCenter=true&width=700&lines=Senior+Full+Stack+Developer;React+%7C+React+Native+%7C+Node.js;Currently+Learning+Go+%26+System+Design;Building+Scalable+Web+%26+Mobile+Apps;Always+Learning+Something+New+🚀" />
-</p>
+  <a href="https://github.com/pranay213">
+    <img src="https://img.shields.io/github/followers/pranay213?style=for-the-badge&logo=github"/>
+  </a>
 
-<p>
-  <img src="https://komarev.com/ghpvc/?username=pranay213&label=Profile%20Views&color=0e75b6&style=for-the-badge"/>
-  <img src="https://img.shields.io/github/followers/pranay213?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/stars/pranay213?affiliations=OWNER&style=for-the-badge"/>
+  <img src="https://komarev.com/ghpvc/?username=pranay213&style=for-the-badge"/>
+
+  <img src="https://img.shields.io/badge/Open%20Source-Lover-blue?style=for-the-badge"/>
+
 </p>
 
 </div>
@@ -20,130 +23,121 @@
 
 # 💫 About Me
 
-```javascript
-const pranay = {
-    location: "India 🇮🇳",
-    role: "Senior Full Stack Developer",
+<table>
+<tr>
 
-    languages: [
-        "JavaScript",
-        "TypeScript",
-        "Go",
-        "Python"
-    ],
+<td width="50%">
 
-    frontend: [
-        "React",
-        "Next.js",
-        "Angular",
-        "React Native",
-        "Expo",
-        "Redux"
-    ],
+## 👨‍💻 Developer
 
-    backend: [
-        "Node.js",
-        "Express",
-        "NestJS",
-        "Go"
-    ],
+- 🚀 Senior Full Stack Developer
+- 💙 React & React Native
+- ⚡ Node.js Backend
+- 🌱 Learning Go
+- 🏗 System Design
+- 📱 Mobile & Web Apps
+- 🤖 AI Enthusiast
 
-    databases: [
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "Redis"
-    ],
+</td>
 
-    devops: [
-        "Docker",
-        "AWS",
-        "GCP",
-        "GitHub Actions",
-        "Linux"
-    ],
+<td width="50%">
 
-    currentlyLearning: [
-        "Go",
-        "Microservices",
-        "System Design",
-        "Kubernetes"
-    ],
+## 🎯 Current Goals
 
-    hobbies: [
-        "Open Source",
-        "Building SaaS",
-        "AI",
-        "Competitive Programming"
-    ]
-};
-```
+- Build SaaS Products
+- Learn Kubernetes
+- Learn Microservices
+- Open Source Contributions
+- Competitive Programming
+- High Performance APIs
+- Cloud Native Development
+
+</td>
+
+</tr>
+</table>
 
 ---
 
-# 🚀 Tech Stack
+# 🛠️ Tech Stack
 
-### Languages
+<table>
+<tr>
 
-<p>
-<img src="https://skillicons.dev/icons?i=js,ts,go,python"/>
-</p>
+<td width="50%">
 
 ### Frontend
 
-<p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,redux,angular,html,css,tailwind"/>
-</p>
+<img src="https://skillicons.dev/icons?i=react,nextjs,angular,redux,typescript,javascript,html,css,tailwind"/>
 
 ### Backend
 
-<p>
 <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,go"/>
-</p>
+
+</td>
+
+<td width="50%">
 
 ### Database
 
-<p>
 <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgresql,redis"/>
-</p>
 
 ### DevOps
 
-<p>
 <img src="https://skillicons.dev/icons?i=docker,aws,gcp,linux,githubactions,nginx"/>
-</p>
 
-### Tools
+</td>
 
-<p>
-<img src="https://skillicons.dev/icons?i=vscode,git,github,figma,postman"/>
-</p>
+</tr>
+</table>
 
 ---
 
 # 📊 GitHub Statistics
 
-<p align="center">
+<table>
+<tr>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&theme=github_dark&hide_border=true&count_private=true"/>
+<td>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=github_dark&hide_border=true"/>
+<img src="https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&theme=github_dark&hide_border=true&count_private=true"/>
 
-</p>
+</td>
+
+<td>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=github_dark&hide_border=true"/>
+
+</td>
+
+</tr>
+</table>
 
 ---
 
-# 🔥 GitHub Streak
+# 🔥 Contribution Streak
 
-<p align="center">
+<table>
+<tr>
+
+<td>
 
 <img src="https://streak-stats.demolab.com?user=pranay213&theme=github-dark&hide_border=true"/>
 
-</p>
+</td>
+
+<td>
+
+<img src="https://github-profile-trophy.vercel.app/?username=pranay213&theme=algolia&column=3&margin-w=15&margin-h=15&no-frame=true"/>
+
+</td>
+
+</tr>
+</table>
 
 ---
 
-# 📈 Contribution Graph
+# 📈 Activity Graph
 
 <p align="center">
 
@@ -153,60 +147,120 @@ const pranay = {
 
 ---
 
-# 🏆 GitHub Trophies
-
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=pranay213&theme=algolia&margin-w=15&margin-h=15&no-frame=true&column=4"/>
-
-</p>
-
----
-
 # 🚀 Featured Projects
 
-| Project | Description |
-|----------|-------------|
-| 💻 Code-O-Bit | Competitive Programming Platform |
-| 🤖 AI Job Apply Bot | AI-powered job automation |
-| 📱 React Native Apps | Cross-platform mobile applications |
-| 🏫 School Management System | Enterprise ERP |
-| 📷 Pelli Story | Digital Wedding Album |
+<table>
+
+<tr>
+
+<td width="50%">
+
+## 💻 Code-O-Bit
+
+Competitive Programming Platform
+
+- Online Judge
+- Contest System
+- Code Editor
+- Leaderboard
+- Discussion
+
+</td>
+
+<td width="50%">
+
+## 🤖 AI Job Apply
+
+AI Powered Job Automation
+
+- Resume Matching
+- Auto Apply
+- Dashboard
+- Analytics
+- AI Assistant
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%">
+
+## 📱 React Native Apps
+
+Cross Platform Applications
+
+- Expo
+- Android
+- iOS
+- OTA Updates
+
+</td>
+
+<td width="50%">
+
+## 🏫 School ERP
+
+School Management System
+
+- Students
+- Teachers
+- Attendance
+- Fees
+- Reports
+
+</td>
+
+</tr>
+
+</table>
 
 ---
 
 # 📚 Currently Learning
 
+<table>
+
+<tr>
+
+<td width="50%">
+
 - Go
-- Distributed Systems
 - Kubernetes
+- Docker
+- gRPC
+- GraphQL
+
+</td>
+
+<td width="50%">
+
+- System Design
 - Microservices
-- Clean Architecture
-- Event Driven Systems
-- High Performance APIs
+- Redis
+- RabbitMQ
+- AWS
+
+</td>
+
+</tr>
+
+</table>
 
 ---
 
-# 💻 Coding Profiles
+# 🏅 Coding Platforms
 
-<p>
+<p align="center">
 
-<a href="https://github.com/pranay213">
-<img src="https://skillicons.dev/icons?i=github"/>
-</a>
+<img src="https://img.shields.io/badge/LeetCode-Coming_Soon-orange?style=for-the-badge&logo=leetcode"/>
 
-<!-- Replace these with your actual profile URLs -->
-<a href="#">
-<img src="https://img.shields.io/badge/LeetCode-orange?style=for-the-badge&logo=leetcode"/>
-</a>
+<img src="https://img.shields.io/badge/CodeChef-Coming_Soon-brown?style=for-the-badge"/>
 
-<a href="#">
-<img src="https://img.shields.io/badge/CodeChef-brown?style=for-the-badge"/>
-</a>
+<img src="https://img.shields.io/badge/Codeforces-Coming_Soon-blue?style=for-the-badge"/>
 
-<a href="#">
-<img src="https://img.shields.io/badge/Codeforces-blue?style=for-the-badge"/>
-</a>
+<img src="https://img.shields.io/badge/HackerRank-Coming_Soon-green?style=for-the-badge&logo=hackerrank"/>
 
 </p>
 
@@ -214,21 +268,21 @@ const pranay = {
 
 # 🌐 Connect With Me
 
-<p>
+<p align="center">
 
 <a href="https://github.com/pranay213">
 <img src="https://skillicons.dev/icons?i=github"/>
 </a>
 
-<a href="https://linkedin.com/in/YOUR-LINKEDIN">
+<a href="https://linkedin.com">
 <img src="https://skillicons.dev/icons?i=linkedin"/>
 </a>
 
-<a href="mailto:YOUR_EMAIL@gmail.com">
+<a href="mailto:your@email.com">
 <img src="https://skillicons.dev/icons?i=gmail"/>
 </a>
 
-<a href="https://twitter.com/YOUR_USERNAME">
+<a href="https://twitter.com">
 <img src="https://skillicons.dev/icons?i=twitter"/>
 </a>
 
@@ -238,8 +292,8 @@ const pranay = {
 
 <div align="center">
 
-### ⭐ Thanks for visiting!
+## ⭐ Thanks for visiting my profile!
 
-*"Code. Learn. Build. Repeat."*
+### *"Code • Learn • Build • Repeat"*
 
 </div>
