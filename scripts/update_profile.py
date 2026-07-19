@@ -1,14 +1,16 @@
 import os
+import sys
 import requests
 import json
-import datetime
 
-# Setup
-TOKEN = os.environ.get("GITHUB_TOKEN", "")
+TOKEN = os.environ.get("GITHUB_TOKEN")
+if not TOKEN:
+    print("Error: GITHUB_TOKEN environment variable is missing.")
+    sys.exit(1)
+
 USER = "pranay213"
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
-# Ensure assets dir exists
 os.makedirs("assets", exist_ok=True)
 
 def fetch_data():
@@ -52,27 +54,26 @@ def fetch_data():
     }
     """ % USER
 
-    if not TOKEN:
-        # Fallback to dummy data if running locally without token
-        return {
-            "repos": 25, "stars": 120, "followers": 50, "following": 30,
-            "contributions": 500, "pinned": [], "langs": {"JavaScript": 50, "Python": 30},
-            "activity": [], "radar": {"commits": 100, "issues": 20, "prs": 10, "reviews": 5}
-        }
-
+    print("Fetching data from GitHub GraphQL API...")
     res = requests.post("https://api.github.com/graphql", json={"query": query}, headers=HEADERS)
     if res.status_code != 200:
-        print("Failed to fetch data", res.text)
-        return None
+        print(f"Error: Failed to fetch data. Status Code: {res.status_code}")
+        print("Response:", res.text)
+        print("Make sure your PAT token is valid and not expired!")
+        sys.exit(1)
+        
+    json_data = res.json()
+    if "errors" in json_data:
+        print("GraphQL Errors:")
+        print(json.dumps(json_data["errors"], indent=2))
+        sys.exit(1)
 
-    data = res.json()["data"]["user"]
+    data = json_data["data"]["user"]
     
-    # Process repositories
     repos = data["repositories"]["nodes"]
     total_repos = data["repositories"]["totalCount"]
     total_stars = sum(r["stargazerCount"] for r in repos)
     
-    # Process languages (mocked calculation by counting repos, accurate would require repository mapping)
     lang_counts = {}
     for r in repos:
         if r["primaryLanguage"]:
@@ -82,13 +83,11 @@ def fetch_data():
     total_lang = sum(lang_counts.values()) or 1
     langs = {k: round((v/total_lang)*100, 1) for k, v in sorted(lang_counts.items(), key=lambda item: item[1], reverse=True)[:5]}
     
-    # Pinned / Top repos
     top_repos = sorted(repos, key=lambda x: x["stargazerCount"], reverse=True)[:4]
 
-    # Activity
     weeks = data["contributionsCollection"]["contributionCalendar"]["weeks"]
     activity = []
-    for week in weeks[-35:]: # Last 35 weeks for the grid
+    for week in weeks[-35:]:
         for day in week["contributionDays"]:
             activity.append(day["contributionCount"])
             
@@ -111,8 +110,7 @@ def fetch_data():
 
 
 def generate_svgs(data):
-    if not data: return
-
+    print("Generating SVGs with real-time data...")
     BG = "#0d1117"
     BORDER = "#30363d"
     TEXT = "#c9d1d9"
@@ -122,7 +120,6 @@ def generate_svgs(data):
     font_family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
     mono_family = "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace"
 
-    # 1. Intro SVG
     intro_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
         <rect width="1000" height="340" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
         <text x="30" y="50" font-family="{font_family}" font-size="28" font-weight="600" fill="{HEADING}">Hi there! 👋 I'm Pranay Kumar Kodam</text>
@@ -154,7 +151,6 @@ def generate_svgs(data):
         </g>
     </svg>"""
 
-    # 2. Stats SVG
     stats_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" width="100%" height="100%">
         <g transform="translate(0, 10)">
             <rect x="0" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
@@ -179,7 +175,6 @@ def generate_svgs(data):
         </g>
     </svg>"""
 
-    # 3. Charts SVG
     activity = data["activity"]
     activity_grid = ""
     for i, count in enumerate(activity):
@@ -190,9 +185,12 @@ def generate_svgs(data):
 
     lang_legend = ""
     colors = ["#3178c6", "#f1e05a", "#e34c26", "#563d7c", "#8b949e"]
-    for i, (lang, pct) in enumerate(data["langs"].items()):
-        c = colors[i % len(colors)]
-        lang_legend += f'<circle cx="0" cy="{i*30 - 5}" r="5" fill="{c}"/> <text x="15" y="{i*30}" fill="{TEXT}">{lang}</text> <text x="100" y="{i*30}" fill="{TEXT}">{pct}%</text>'
+    if data["langs"]:
+        for i, (lang, pct) in enumerate(data["langs"].items()):
+            c = colors[i % len(colors)]
+            lang_legend += f'<circle cx="0" cy="{i*30 - 5}" r="5" fill="{c}"/> <text x="15" y="{i*30}" fill="{TEXT}">{lang}</text> <text x="100" y="{i*30}" fill="{TEXT}">{pct}%</text>'
+    else:
+        lang_legend = f'<text x="15" y="0" fill="{TEXT}">No public code detected</text>'
 
     charts_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%" height="100%">
         <rect x="0" y="10" width="590" height="280" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
@@ -212,11 +210,11 @@ def generate_svgs(data):
         </g>
     </svg>"""
 
-    # 4. Repos SVG
     repos = data["pinned"]
     repo_svgs = ""
     coords = [(0,0), (285,0), (0, 120), (285, 120)]
     for i, r in enumerate(repos):
+        if i >= len(coords): break
         x, y = coords[i]
         name = r["name"]
         desc = (r["description"] or "")[:40] + ("..." if len(r["description"] or "") > 40 else "")
@@ -260,7 +258,7 @@ def generate_svgs(data):
     with open('assets/stats.svg', 'w') as f: f.write(stats_svg)
     with open('assets/charts.svg', 'w') as f: f.write(charts_svg)
     with open('assets/repos.svg', 'w') as f: f.write(repos_svg)
-    print("Generated real-time SVGs!")
+    print("Successfully generated all SVGs.")
 
 if __name__ == "__main__":
     data = fetch_data()
