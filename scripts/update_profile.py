@@ -72,6 +72,15 @@ def fetch_data():
     reviews_count = get_search_count(f"reviewed-by:{USER} type:pr")
     commits_count = get_search_count(f"author:{USER}", endpoint="commits")
 
+    print("Fetching Profile Views...")
+    try:
+        res = requests.get(f"https://komarev.com/ghpvc/?username={USER}", timeout=5)
+        views_match = re.findall(r'>([0-9,]+)</text>', res.text)
+        views_count = int(views_match[0].replace(',', '')) if views_match else 0
+    except Exception as e:
+        print(f"Failed to fetch profile views: {e}")
+        views_count = 0
+
     data_repos = json_repos["data"]["user"]
     
     repos = data_repos["repositories"]["nodes"]
@@ -95,6 +104,7 @@ def fetch_data():
         "followers": data_repos["followers"]["totalCount"],
         "following": data_repos["following"]["totalCount"],
         "contributions": total_contribs,
+        "views": views_count,
         "pinned": top_repos,
         "langs": langs,
         "activity": activity,
@@ -161,41 +171,49 @@ def generate_svgs(data):
             <g opacity="0">
                 <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.1s" fill="freeze" additive="sum"/>
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.1s" fill="freeze"/>
-                <rect x="0" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-                <text x="70" y="35" font-family="{font_family}" font-size="14" fill="{BLUE}" font-weight="600">Repositories</text>
-                <text x="70" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600">{data["repos"]}</text>
+                <rect x="0" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="76" y="35" font-family="{font_family}" font-size="14" fill="{BLUE}" font-weight="600" text-anchor="middle">Repositories</text>
+                <text x="76" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["repos"]}</text>
             </g>
             
             <g opacity="0">
                 <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.2s" fill="freeze" additive="sum"/>
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
-                <rect x="202" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-                <text x="272" y="35" font-family="{font_family}" font-size="14" fill="#e3b341" font-weight="600">Stars Earned</text>
-                <text x="272" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600">{data["stars"]}</text>
+                <rect x="169" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="245" y="35" font-family="{font_family}" font-size="14" fill="#e3b341" font-weight="600" text-anchor="middle">Stars Earned</text>
+                <text x="245" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["stars"]}</text>
             </g>
             
             <g opacity="0">
                 <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.3s" fill="freeze" additive="sum"/>
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
-                <rect x="405" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-                <text x="475" y="35" font-family="{font_family}" font-size="14" fill="#a371f7" font-weight="600">Contributions</text>
-                <text x="475" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600">{data["contributions"]}</text>
+                <rect x="338" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="414" y="35" font-family="{font_family}" font-size="14" fill="#a371f7" font-weight="600" text-anchor="middle">Commits</text>
+                <text x="414" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["radar"]["commits"]}</text>
             </g>
             
             <g opacity="0">
                 <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.4s" fill="freeze" additive="sum"/>
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.4s" fill="freeze"/>
-                <rect x="607" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-                <text x="677" y="35" font-family="{font_family}" font-size="14" fill="#a371f7" font-weight="600">Followers</text>
-                <text x="677" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600">{data["followers"]}</text>
+                <rect x="507" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="583" y="35" font-family="{font_family}" font-size="14" fill="#3fb950" font-weight="600" text-anchor="middle">Contributions</text>
+                <text x="583" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["contributions"]}</text>
             </g>
             
             <g opacity="0">
                 <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.5s" fill="freeze" additive="sum"/>
                 <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze"/>
-                <rect x="810" y="0" width="190" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-                <text x="880" y="35" font-family="{font_family}" font-size="14" fill="#3fb950" font-weight="600">Following</text>
-                <text x="880" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600">{data["following"]}</text>
+                <rect x="676" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="752" y="35" font-family="{font_family}" font-size="14" fill="#ff7b72" font-weight="600" text-anchor="middle">Followers</text>
+                <text x="752" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["followers"]}</text>
+            </g>
+
+            <g opacity="0">
+                <animateTransform attributeName="transform" type="scale" values="0.9;1" dur="0.5s" begin="0.6s" fill="freeze" additive="sum"/>
+                <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+                <rect x="845" y="0" width="153" height="80" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+                <text x="921" y="35" font-family="{font_family}" font-size="14" fill="#58a6ff" font-weight="600" text-anchor="middle">Profile Views</text>
+                <text x="921" y="65" font-family="{font_family}" font-size="24" fill="{HEADING}" font-weight="600" text-anchor="middle">{data["views"]:,}</text>
             </g>
         </g>
     </svg>"""
