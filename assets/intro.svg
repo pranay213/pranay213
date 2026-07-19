@@ -1,16 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
+        <style>
+            @keyframes typing { from { width: 0; } to { width: 100%; } }
+            @keyframes blink { 50% { opacity: 0; } }
+            @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+            @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+            .text-slide { animation: slideIn 0.8s ease-out forwards; opacity: 0; }
+            .t1 { animation-delay: 0.1s; } .t2 { animation-delay: 0.2s; } .t3 { animation-delay: 0.3s; }
+            .t4 { animation-delay: 0.4s; } .t5 { animation-delay: 0.5s; } .t6 { animation-delay: 0.6s; }
+            .t7 { animation-delay: 0.7s; } .t8 { animation-delay: 0.8s; }
+            .terminal-window { animation: float 6s ease-in-out infinite; }
+        </style>
         <rect width="1000" height="340" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
-        <text x="30" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#ffffff">Hi there! 👋 I'm Pranay Kumar Kodam</text>
+        <text x="30" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#ffffff" class="text-slide t1">Hi there! 👋 I'm Pranay Kumar Kodam</text>
         <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#c9d1d9">
-            <text x="30" y="90">💻 Full Stack Developer with 6+ years of experience</text>
-            <text x="30" y="125">⚡ Expertise in React, Next.js, Node.js, React Native, MongoDB</text>
-            <text x="30" y="160">☁️ Experienced with AWS, GCP, Docker &amp; CI/CD</text>
-            <text x="30" y="195">🎯 Passionate about building real-world products</text>
-            <text x="30" y="230">🔭 Currently exploring <tspan fill="#58a6ff">Go</tspan>, System Design &amp; DevOps</text>
-            <text x="30" y="265">💬 Ask me about JavaScript, TypeScript, React, Node.js</text>
-            <text x="30" y="300">📫 Reach me: <tspan fill="#58a6ff" text-decoration="underline">pranaykodam.213@gmail.com</tspan></text>
+            <text x="30" y="90" class="text-slide t2">💻 Full Stack Developer with 6+ years of experience</text>
+            <text x="30" y="125" class="text-slide t3">⚡ Expertise in React, Next.js, Node.js, React Native, MongoDB</text>
+            <text x="30" y="160" class="text-slide t4">☁️ Experienced with AWS, GCP, Docker &amp; CI/CD</text>
+            <text x="30" y="195" class="text-slide t5">🎯 Passionate about building real-world products</text>
+            <text x="30" y="230" class="text-slide t6">🔭 Currently exploring <tspan fill="#58a6ff">Go</tspan>, System Design &amp; DevOps</text>
+            <text x="30" y="265" class="text-slide t7">💬 Ask me about JavaScript, TypeScript, React, Node.js</text>
+            <text x="30" y="300" class="text-slide t8">📫 Reach me: <tspan fill="#58a6ff" text-decoration="underline">pranaykodam.213@gmail.com</tspan></text>
         </g>
-        <g transform="translate(530, 25)">
+        <g transform="translate(530, 25)" class="terminal-window">
             <rect width="440" height="290" rx="6" fill="#010409" stroke="#30363d" stroke-width="1"/>
             <circle cx="20" cy="20" r="5" fill="#ff5f56"/>
             <circle cx="40" cy="20" r="5" fill="#ffbd2e"/>
