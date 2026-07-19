@@ -52,10 +52,6 @@ def fetch_data():
               }
             }
           }
-          totalCommitContributions
-          totalIssueContributions
-          totalPullRequestContributions
-          totalPullRequestReviewContributions
         }
       }
     }
@@ -67,7 +63,7 @@ def fetch_data():
         print(f"Error fetching repos: {res_repos.status_code}")
         sys.exit(1)
         
-    print("Fetching contributions data...")
+    print("Fetching activity calendar data...")
     res_contribs = requests.post("https://api.github.com/graphql", json={"query": query_contribs}, headers=HEADERS)
     if res_contribs.status_code != 200:
         print(f"Error fetching contribs: {res_contribs.status_code}")
@@ -80,17 +76,19 @@ def fetch_data():
         print("GraphQL Errors detected!")
         if "errors" in json_repos: print("Repos error:", json.dumps(json_repos["errors"], indent=2))
         if "errors" in json_contribs: print("Contribs error:", json.dumps(json_contribs["errors"], indent=2))
-        
-        # Fallback to zeros for the radar chart if contributions fail due to resource limits
-        if "errors" in json_contribs and "RESOURCE_LIMITS_EXCEEDED" in str(json_contribs["errors"]):
-            print("Resource limit exceeded on contributions. Proceeding with safe partial data...")
-            json_contribs = {"data": {"user": {"contributionsCollection": {
-                "contributionCalendar": {"totalContributions": 0, "weeks": []},
-                "totalCommitContributions": 0, "totalIssueContributions": 0,
-                "totalPullRequestContributions": 0, "totalPullRequestReviewContributions": 0
-            }}}}
-        else:
-            sys.exit(1)
+        sys.exit(1)
+
+    print("Fetching radar stats via REST Search API to bypass limits...")
+    def get_search_count(q, endpoint="issues"):
+        res = requests.get(f"https://api.github.com/search/{endpoint}?q={q}", headers=HEADERS)
+        if res.status_code == 200:
+            return res.json().get("total_count", 0)
+        return 0
+
+    issues_count = get_search_count(f"author:{USER} type:issue")
+    prs_count = get_search_count(f"author:{USER} type:pr")
+    reviews_count = get_search_count(f"reviewed-by:{USER} type:pr")
+    commits_count = get_search_count(f"author:{USER}", endpoint="commits")
 
     data_repos = json_repos["data"]["user"]
     data_contribs = json_contribs["data"]["user"]
@@ -126,10 +124,10 @@ def fetch_data():
         "langs": langs,
         "activity": activity[-35*7:] if activity else [0]*(35*7),
         "radar": {
-            "commits": data_contribs["contributionsCollection"]["totalCommitContributions"],
-            "issues": data_contribs["contributionsCollection"]["totalIssueContributions"],
-            "prs": data_contribs["contributionsCollection"]["totalPullRequestContributions"],
-            "reviews": data_contribs["contributionsCollection"]["totalPullRequestReviewContributions"]
+            "commits": commits_count,
+            "issues": issues_count,
+            "prs": prs_count,
+            "reviews": reviews_count
         }
     }
 
