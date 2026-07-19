@@ -2,6 +2,7 @@ import os
 import sys
 import requests
 import json
+import datetime
 
 TOKEN = os.environ.get("GITHUB_TOKEN")
 if not TOKEN:
@@ -39,10 +40,15 @@ def fetch_data():
     }
     """ % USER
 
+    now = datetime.datetime.utcnow()
+    one_year_ago = now - datetime.timedelta(days=365)
+    to_date = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    from_date = one_year_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
+
     query_contribs = """
     query {
       user(login: "%s") {
-        contributionsCollection {
+        contributionsCollection(from: "%s", to: "%s") {
           contributionCalendar {
             totalContributions
             weeks {
@@ -55,7 +61,7 @@ def fetch_data():
         }
       }
     }
-    """ % USER
+    """ % (USER, from_date, to_date)
 
     print("Fetching repositories data...")
     res_repos = requests.post("https://api.github.com/graphql", json={"query": query_repos}, headers=HEADERS)
@@ -76,7 +82,15 @@ def fetch_data():
         print("GraphQL Errors detected!")
         if "errors" in json_repos: print("Repos error:", json.dumps(json_repos["errors"], indent=2))
         if "errors" in json_contribs: print("Contribs error:", json.dumps(json_contribs["errors"], indent=2))
-        sys.exit(1)
+        
+        # Fallback to zeros for the calendar if contributions fail due to resource limits
+        if "errors" in json_contribs and "RESOURCE_LIMITS_EXCEEDED" in str(json_contribs["errors"]):
+            print("Resource limit exceeded on contributions. Proceeding with safe partial data...")
+            json_contribs = {"data": {"user": {"contributionsCollection": {
+                "contributionCalendar": {"totalContributions": 0, "weeks": []}
+            }}}}
+        else:
+            sys.exit(1)
 
     print("Fetching radar stats via REST Search API to bypass limits...")
     def get_search_count(q, endpoint="issues"):
