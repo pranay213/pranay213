@@ -1,27 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#161b22" />
-      <stop offset="100%" stop-color="#0d1117" />
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f29" />
+      <stop offset="100%" stop-color="#0a0c10" />
     </linearGradient>
+    <filter id="glowCard">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="400" height="300" rx="15" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
-  <g transform="translate(100, 60)">
-    <!-- Abstract representation of a person with gears/nodes -->
-    <circle cx="100" cy="50" r="30" fill="none" stroke="#58a6ff" stroke-width="4"/>
-    <circle cx="100" cy="50" r="10" fill="#a371f7"/>
-    <path d="M 60 140 C 60 100, 140 100, 140 140" fill="none" stroke="#58a6ff" stroke-width="4" stroke-linecap="round"/>
+  <rect width="500" height="400" rx="24" fill="url(#cardBg)" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+  
+  <g transform="translate(100, 70)">
+    <!-- High tech hexagon design -->
+    <polygon points="150,20 250,75 250,185 150,240 50,185 50,75" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.5"/>
+    <polygon points="150,40 230,85 230,175 150,220 70,175 70,85" fill="none" stroke="#4facfe" stroke-width="1" opacity="0.8">
+       <animateTransform attributeName="transform" type="rotate" from="0 150 130" to="360 150 130" dur="20s" repeatCount="indefinite"/>
+    </polygon>
     
-    <!-- Nodes connecting -->
-    <circle cx="30" cy="30" r="6" fill="#3fb950"/>
-    <line x1="36" y1="36" x2="75" y2="45" stroke="#30363d" stroke-width="2"/>
+    <circle cx="150" cy="130" r="40" fill="rgba(0, 242, 254, 0.1)" stroke="#00f2fe" stroke-width="2" filter="url(#glowCard)"/>
+    <path d="M135,115 L165,115 L165,145 L135,145 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="150" cy="130" r="5" fill="#f093fb"/>
     
-    <circle cx="170" cy="40" r="6" fill="#ff7b72"/>
-    <line x1="164" y1="42" x2="128" y2="50" stroke="#30363d" stroke-width="2"/>
-    
-    <circle cx="150" cy="110" r="6" fill="#f1e05a"/>
-    <line x1="145" y1="105" x2="135" y2="95" stroke="#30363d" stroke-width="2"/>
+    <!-- Floating nodes -->
+    <circle cx="50" cy="75" r="8" fill="#f5576c"><animate attributeName="cy" values="75;65;75" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="250" cy="185" r="8" fill="#00f2fe"><animate attributeName="cy" values="185;195;185" dur="4s" repeatCount="indefinite"/></circle>
   </g>
-  <text x="200" y="240" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#c9d1d9" text-anchor="middle">Building Scalable Systems</text>
-  <text x="200" y="265" font-family="-apple-system, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">6+ Years of Excellence</text>
+  
+  <text x="250" y="320" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">System Architecture</text>
+  <text x="250" y="350" font-family="-apple-system, sans-serif" font-size="16" fill="#8b949e" text-anchor="middle">Designing for Scale & Performance</text>
 </svg>
