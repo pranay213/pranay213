@@ -1,277 +1,223 @@
 <div align="center">
 
-# 🚀 Pranay Kumar
-
-### Senior Full Stack Developer • React • React Native • Node.js • Go
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=900&lines=Senior+Full+Stack+Developer;React+%7C+React+Native+%7C+Node.js;Currently+Learning+Go+%26+System+Design;Building+Scalable+Applications;Welcome+to+my+GitHub+Profile+🚀"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-banner.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-banner.svg">
+  <img alt="Pranay Kumar - Senior Full Stack Developer" src="assets/hero-banner.svg" width="100%">
+</picture>
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=pranay213&label=Visitors&style=for-the-badge"/>
-
-<img src="https://img.shields.io/github/followers/pranay213?style=for-the-badge&logo=github"/>
-
-<img src="https://img.shields.io/github/stars/pranay213?affiliations=OWNER&style=for-the-badge"/>
-
-<img src="https://img.shields.io/badge/Open%20Source-Lover-blue?style=for-the-badge"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider.svg">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</picture>
 
 </div>
 
----
+<br>
 
-# 📈 GitHub Overview
-
-<p align="center">
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=pranay213&theme=github-compact&hide_border=true&area=true"/>
-
-</p>
-
----
-
-# 📊 GitHub Statistics
+## 💫 About Me
 
 <table>
-<tr>
-
-<td width="50%">
-
-<img width="100%" src="https://github-readme-stats.vercel.app/api?username=pranay213&show_icons=true&theme=github_dark&hide_border=true&count_private=true"/>
-
-</td>
-
-<td width="50%">
-
-<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranay213&layout=compact&theme=github_dark&hide_border=true"/>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-<img width="100%" src="https://streak-stats.demolab.com?user=pranay213&theme=github-dark&hide_border=true"/>
-
-</td>
-
-<td>
-
-<img width="100%" src="https://github-profile-trophy.vercel.app/?username=pranay213&theme=algolia&no-frame=true&column=3&margin-w=10"/>
-
-</td>
-
-</tr>
-
+  <tr>
+    <td width="40%" align="center">
+      <img src="assets/about.svg" alt="About Me Illustration" width="100%">
+    </td>
+    <td width="60%">
+      <h3>👨‍💻 Who Am I?</h3>
+      <ul>
+        <li>🚀 <b>6+ Years Experience</b> in Building Scalable Systems</li>
+        <li>💙 <b>Full Stack Developer</b> specialized in <b>React</b> & <b>Node.js</b></li>
+        <li>📱 Mobile Development with <b>React Native</b></li>
+        <li>🌱 Currently learning and building with <b>Go</b></li>
+        <li>☁️ Extensive experience with <b>AWS</b>, <b>Docker</b>, and <b>Kubernetes</b></li>
+        <li>🤖 Exploring the world of <b>AI Applications</b></li>
+        <li>🐧 Passionate about <b>Linux</b> & <b>Open Source</b></li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
----
-
-# 💫 About Me
-
-<table>
-
-<tr>
-
-<td width="50%">
-
-### 👨‍💻 Who Am I?
-
-* 🚀 Senior Full Stack Developer
-* 💙 React & React Native
-* ⚡ Node.js Backend
-* 🌱 Learning Go
-* 🏗️ System Design Enthusiast
-* ☁️ Cloud & DevOps
-* 🤖 AI Applications
-
-</td>
-
-<td width="50%">
-
-### 🎯 2026 Goals
-
-✅ Build SaaS Products
-
-✅ Master Go
-
-✅ Kubernetes
-
-✅ Microservices
-
-✅ Open Source
-
-✅ Competitive Programming
-
-✅ AI Projects
-
-</td>
-
-</tr>
-
-</table>
-
----
-
-# 💻 Tech Stack
-
-<table>
-
-<tr>
-
-<td width="50%">
-
-## Frontend
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,angular,redux,typescript,javascript,html,css,tailwind"/>
-
-<br><br>
-
-## Backend
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,go"/>
-
-</td>
-
-<td width="50%">
-
-## Database
-
-<img src="https://skillicons.dev/icons?i=mongodb,mysql,postgresql,redis"/>
-
-<br><br>
-
-## DevOps
-
-<img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,linux,githubactions"/>
-
-</td>
-
-</tr>
-
-</table>
-
----
-
-# 🚀 Featured Projects
-
-<table>
-
-<tr>
-
-<td width="50%">
-
-## 💻 Code-O-Bit
-
-Competitive Programming Platform
-
-* Online Judge
-* Contest Platform
-* Live Leaderboard
-* Code Editor
-* Discussions
-
-</td>
-
-<td width="50%">
-
-## 🤖 AI Job Apply
-
-AI Powered Job Automation
-
-* Resume Matching
-* AI Assistant
-* Auto Apply
-* Analytics
-* Dashboard
-
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%">
-
-## 📱 React Native
-
-Cross Platform Mobile Apps
-
-* Android
-* iOS
-* Expo
-* OTA Updates
-
-</td>
-
-<td width="50%">
-
-## 🏫 School ERP
-
-Enterprise School System
-
-* Attendance
-* Fees
-* Timetable
-* Reports
-* Notifications
-
-</td>
-
-</tr>
-
-</table>
-
----
-
-# 📚 Currently Learning
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go"/>
-
-<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes"/>
-
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker"/>
-
-<img src="https://img.shields.io/badge/System_Design-111111?style=for-the-badge"/>
-
-<img src="https://img.shields.io/badge/Microservices-FF6B00?style=for-the-badge"/>
-
-</p>
-
----
-
-# 🌐 Connect With Me
-
-<p align="center">
-
-<a href="https://github.com/pranay213">
-<img src="https://skillicons.dev/icons?i=github" height="50"/>
-</a>
-
-<a href="https://linkedin.com/in/YOUR_LINKEDIN">
-<img src="https://skillicons.dev/icons?i=linkedin" height="50"/>
-</a>
-
-<a href="mailto:YOUR_EMAIL@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail" height="50"/>
-</a>
-
-<a href="https://x.com/YOUR_USERNAME">
-<img src="https://skillicons.dev/icons?i=twitter" height="50"/>
-</a>
-
-</p>
-
----
+<br>
 
 <div align="center">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</div>
 
-## ⭐ Thanks for visiting!
+<br>
 
-> **"Code. Build. Learn. Repeat."**
+<div align="center">
+  <img src="assets/tech-stack.svg" alt="Technical Arsenal" width="100%">
+</div>
 
+<br>
+
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <img src="assets/frontend.svg" alt="Frontend Icon" width="60"><br>
+      <h3>Frontend</h3>
+      <p>React<br>Next.js<br>Redux<br>TypeScript<br>Tailwind CSS</p>
+    </td>
+    <td width="33%" align="center">
+      <img src="assets/backend.svg" alt="Backend Icon" width="60"><br>
+      <h3>Backend</h3>
+      <p>Node.js<br>Express<br>NestJS<br>Go</p>
+    </td>
+    <td width="33%" align="center">
+      <img src="assets/coding.svg" alt="Coding Icon" width="150"><br>
+      <h3>Database & Cloud</h3>
+      <p>MongoDB<br>PostgreSQL<br>Docker<br>Kubernetes<br>AWS</p>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="assets/projects.svg" alt="Featured Projects" width="100%">
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>💻 Code-O-Bit</h3>
+      <p><i>Competitive Programming Platform</i></p>
+      <ul>
+        <li>Online Judge & Live Leaderboard</li>
+        <li>Contest Platform & Code Editor</li>
+      </ul>
+      <p><b>Tech:</b> React, Node.js, Docker</p>
+    </td>
+    <td width="50%">
+      <h3>🤖 AI Job Apply</h3>
+      <p><i>AI Powered Job Automation</i></p>
+      <ul>
+        <li>Resume Matching & AI Assistant</li>
+        <li>Auto Apply & Analytics Dashboard</li>
+      </ul>
+      <p><b>Tech:</b> Next.js, Python, OpenAI</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>📱 React Native Apps</h3>
+      <p><i>Cross Platform Mobile Apps</i></p>
+      <ul>
+        <li>Android & iOS Development</li>
+        <li>Expo & OTA Updates</li>
+      </ul>
+      <p><b>Tech:</b> React Native, Expo, Redux</p>
+    </td>
+    <td width="50%">
+      <h3>🏫 School ERP</h3>
+      <p><i>Enterprise School System</i></p>
+      <ul>
+        <li>Attendance, Fees & Timetable</li>
+        <li>Reports & Notifications</li>
+      </ul>
+      <p><b>Tech:</b> NestJS, PostgreSQL, React</p>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</div>
+
+<br>
+
+## 📚 Timeline & Roadmap
+
+<table>
+  <tr>
+    <td width="20%" align="center"><b>Current Focus</b></td>
+    <td>Mastering <b>Go</b> for backend development</td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Next</b></td>
+    <td>Building robust <b>Microservices</b></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Next</b></td>
+    <td>Advanced <b>System Design</b> patterns</td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Next</b></td>
+    <td>Deep dive into <b>Kubernetes</b></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Next</b></td>
+    <td><b>Cloud Native</b> architectures</td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</div>
+
+<br>
+
+## 📈 Skills Progress
+
+<table>
+  <tr>
+    <td width="50%"><b>Frontend (React, TS)</b></td>
+    <td width="50%">████████████████████ <b>95%</b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Mobile (React Native)</b></td>
+    <td width="50%">████████████████████ <b>95%</b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Backend (Node.js)</b></td>
+    <td width="50%">███████████████████░ <b>90%</b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Cloud (Docker, AWS)</b></td>
+    <td width="50%">██████████████░░░░░░ <b>70%</b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Backend (Go)</b></td>
+    <td width="50%">█████████████░░░░░░░ <b>65%</b></td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+  <img alt="Divider" src="assets/divider.svg" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="assets/contact.svg" alt="Contact Section" width="100%">
+  
+  <br><br>
+  
+  <a href="https://github.com/pranay213">GitHub</a> &nbsp; | &nbsp;
+  <a href="https://linkedin.com">LinkedIn</a> &nbsp; | &nbsp;
+  <a href="mailto:contact@example.com">Email</a> &nbsp; | &nbsp;
+  <a href="#">Portfolio</a>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="assets/footer.svg" alt="Footer" width="100%">
 </div>

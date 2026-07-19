@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+  <rect width="800" height="120" rx="15" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="400" y="65" font-family="-apple-system, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">Featured Projects</text>
+  <text x="400" y="95" font-family="-apple-system, sans-serif" font-size="16" fill="#8b949e" text-anchor="middle">Things I've built with passion</text>
+  <path d="M 250 55 L 200 55 L 220 35 M 200 55 L 220 75" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 550 55 L 600 55 L 580 35 M 600 55 L 580 75" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

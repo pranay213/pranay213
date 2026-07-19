@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="15" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
+  <g transform="translate(100, 60)">
+    <!-- Abstract representation of a person with gears/nodes -->
+    <circle cx="100" cy="50" r="30" fill="none" stroke="#58a6ff" stroke-width="4"/>
+    <circle cx="100" cy="50" r="10" fill="#a371f7"/>
+    <path d="M 60 140 C 60 100, 140 100, 140 140" fill="none" stroke="#58a6ff" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Nodes connecting -->
+    <circle cx="30" cy="30" r="6" fill="#3fb950"/>
+    <line x1="36" y1="36" x2="75" y2="45" stroke="#30363d" stroke-width="2"/>
+    
+    <circle cx="170" cy="40" r="6" fill="#ff7b72"/>
+    <line x1="164" y1="42" x2="128" y2="50" stroke="#30363d" stroke-width="2"/>
+    
+    <circle cx="150" cy="110" r="6" fill="#f1e05a"/>
+    <line x1="145" y1="105" x2="135" y2="95" stroke="#30363d" stroke-width="2"/>
+  </g>
+  <text x="200" y="240" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#c9d1d9" text-anchor="middle">Building Scalable Systems</text>
+  <text x="200" y="265" font-family="-apple-system, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">6+ Years of Excellence</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="50%" stop-color="#a371f7" />
+      <stop offset="100%" stop-color="#3fb950" />
+      <animate attributeName="x1" values="-100%;100%;-100%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;200%;0%" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="300" rx="15" fill="url(#grad1)" stroke="#30363d" stroke-width="2"/>
+  
+  <g filter="url(#glow)">
+    <text x="400" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="800" fill="#ffffff" text-anchor="middle">Pranay Kumar</text>
+  </g>
+  
+  <text x="400" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600" fill="url(#grad2)" text-anchor="middle">Senior Full Stack Developer</text>
+  
+  <text x="400" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400" fill="#8b949e" text-anchor="middle">React • React Native • Node.js • Go • Kubernetes</text>
+  
+  <!-- Decorative particles -->
+  <circle cx="100" cy="80" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="700" cy="200" r="3" fill="#a371f7"><animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="650" cy="60" r="1.5" fill="#3fb950"><animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="150" cy="230" r="2.5" fill="#58a6ff"><animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/></circle>
+</svg>

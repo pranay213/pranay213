@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="15" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <rect x="15" y="15" width="370" height="270" rx="8" fill="#0d1117"/>
+  <!-- macOS window controls -->
+  <circle cx="35" cy="35" r="6" fill="#ff5f56"/>
+  <circle cx="55" cy="35" r="6" fill="#ffbd2e"/>
+  <circle cx="75" cy="35" r="6" fill="#27c93f"/>
+  
+  <!-- Code content -->
+  <g font-family="monospace" font-size="14" transform="translate(30, 75)">
+    <text y="0"><tspan fill="#ff7b72">class</tspan> <tspan fill="#d2a8ff">Developer</tspan> {</text>
+    <text y="30">  <tspan fill="#79c0ff">constructor</tspan>() {</text>
+    <text y="60">    <tspan fill="#79c0ff">this</tspan>.name = <tspan fill="#a5d6ff">"Pranay Kumar"</tspan>;</text>
+    <text y="90">    <tspan fill="#79c0ff">this</tspan>.role = <tspan fill="#a5d6ff">"Senior Full Stack"</tspan>;</text>
+    <text y="120">    <tspan fill="#79c0ff">this</tspan>.coffee = <tspan fill="#79c0ff">true</tspan>;</text>
+    <text y="150">  }</text>
+    <text y="180">  <tspan fill="#d2a8ff">code</tspan>() { <tspan fill="#ff7b72">return</tspan> <tspan fill="#a5d6ff">"🚀"</tspan>; }</text>
+    <text y="210">}</text>
+  </g>
+</svg>
